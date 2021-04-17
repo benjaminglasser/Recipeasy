@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: lightgreen;
+}
+
+h1 {
+    margin: 40px;
+}
+
+nav {
+    grid-area: nav;
+    background-color: rgb(118, 218, 118);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px 0 30px;
+    width: 100%;
+}
+
+nav > a {
+    margin: 20px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  
+  nav > #title {
+    margin-right: auto;
+    font-size: 60px;
+  }
