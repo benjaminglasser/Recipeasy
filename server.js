@@ -3,7 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const port = 3000;
-// require('./config/database');
+require('./config/database');
 
 // Create our express app
 const app = express();
