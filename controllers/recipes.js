@@ -7,7 +7,9 @@ module.exports = {
 }
 
 function index (req, res) {
-    res.render('recipes/index')
+    Recipe.find({}).sort({updatedAt: 1}).exec(function(err, recipes){
+        res.render('recipes/index', {recipes})
+    });
 }
 
 function newRecipe (req, res) {

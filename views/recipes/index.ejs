@@ -1,3 +1,24 @@
 <%- include('../partials/header') %>
 
 <h1>Here are your recipes:</h1>
+<table id="list">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Cook Time</th>
+            <th>Difficulty</th>
+            <th>Date Added</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% recipes.forEach(function(recipe) { %>
+            <tr>
+                <td> <%= recipe.title %> </td>
+                <td> <%= recipe.cookTime %> </td>
+                <td> <%= recipe.difficulty %> </td>
+                <td> <%= recipe.updatedAt.toLocaleString() %> </td>
+                <td><a id="details-btn" href="/recipes/<%= recipe._id %>">DETAILS</a></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
