@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const recipeSchema = new Schema ({
@@ -14,9 +15,6 @@ const recipeSchema = new Schema ({
     },
     description: {
         type: String,
-    },
-    dateAdded: {
-        type: Date,
     },
     instructions: {
         type: String,

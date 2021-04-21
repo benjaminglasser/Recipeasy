@@ -38,3 +38,19 @@ nav > a {
     margin-right: auto;
     font-size: 60px;
   }
+
+#new-recipe {
+    display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 22rem));
+}
+
+#submit {
+    margin: 30px 200px;
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgb(204, 245, 252);
+    text-decoration: none;
+    border-radius: 5px;
+    grid-column: 1/ span 2;
+  }

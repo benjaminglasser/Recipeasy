@@ -24,7 +24,7 @@ app.use(methodOverride('_method'));
 
 // Mount our route handlers
 app.use('/', indexRouter);
-app.use('/recipe', recipesRouter);
+app.use('/recipes', recipesRouter);
 
 
 // Tell our app to listen on a port - our app needs to process files
