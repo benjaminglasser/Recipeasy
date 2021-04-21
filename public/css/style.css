@@ -97,3 +97,16 @@ a:hover {
     grid-template-columns: auto auto;
     grid-gap: 1rem;
   }
+
+  #delete-btn {
+    font-size: 15px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}  
+
+#delete-btn:hover {
+    background-color: rgb(170, 53, 53);
+}
