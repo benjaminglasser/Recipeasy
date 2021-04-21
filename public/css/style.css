@@ -54,7 +54,7 @@ table td {
 }
 
 a {
-    background-color: rgb(204, 245, 252);
+    background-color: rgb(120, 255, 108);
     color: black;
     margin: 20px;
     text-decoration: none;
@@ -63,7 +63,7 @@ a {
 }
 
 a:hover {
-    color: rgb(84, 110, 125);
+    color: rgb(125, 125, 125);
 }
 
 #new-recipe {
@@ -90,3 +90,10 @@ a:hover {
     font-size: 12px;
     padding: 4px;
 }
+
+#show-page {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1rem;
+  }

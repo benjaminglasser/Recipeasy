@@ -14,8 +14,8 @@
         <% recipes.forEach(function(recipe) { %>
             <tr>
                 <td> <%= recipe.title %> </td>
-                <td> <%= recipe.cookTime %> </td>
-                <td> <%= recipe.difficulty %> </td>
+                <td> <%= recipe.cookTime %> min </td>
+                <td> <%= recipe.difficulty %>/10 </td>
                 <td> <%= recipe.updatedAt.toLocaleString() %> </td>
                 <td><a id="details-btn" href="/recipes/<%= recipe._id %>">DETAILS</a></td>
             </tr>
