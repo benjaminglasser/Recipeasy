@@ -14,3 +14,11 @@
     <textarea rows="20" cols="25" name="instructions"></textarea>
     <input id="submit" type="submit" value="Add Recipe">
 </form>
+
+<form id="add-ingredient-form" action="/recipes/new" method="POST">
+    <label>Ingredients:</label>
+    <input type="text" name="ingredient">
+    <label>Amount:</label>
+    <input type="text" name="amount">
+    <input id="submit" type="submit" value="+">
+</form>

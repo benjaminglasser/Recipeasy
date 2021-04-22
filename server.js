@@ -11,6 +11,7 @@ const app = express();
 // routers
 const indexRouter = require('./routes/index');
 const recipesRouter = require('./routes/recipes');
+const ingredientsRouter = require('./routes/ingredients');
 
 
 // Configure application settings app.set()
@@ -25,6 +26,7 @@ app.use(methodOverride('_method'));
 // Mount our route handlers
 app.use('/', indexRouter);
 app.use('/recipes', recipesRouter);
+app.use('/', ingredientsRouter);
 
 
 // Tell our app to listen on a port - our app needs to process files

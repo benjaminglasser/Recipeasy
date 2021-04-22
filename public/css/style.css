@@ -66,11 +66,7 @@ a:hover {
     color: rgb(125, 125, 125);
 }
 
-#new-recipe {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(2, minmax(auto, 22rem));
-}
+
 
 #submit {
     margin: 30px 200px;
@@ -96,17 +92,30 @@ a:hover {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 1rem;
-  }
+}
 
-  #delete-btn {
+#delete-btn {
     font-size: 15px;
     background-color: red;
     color: white;
     text-decoration: none;
     padding: 10px;
     border-radius: 5px;
-}  
+}
 
 #delete-btn:hover {
     background-color: rgb(170, 53, 53);
+}
+
+#new-recipe {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, minmax(auto, 22rem));
+}
+
+#add-ingredient-form {
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, minmax(auto, 22rem));
 }
