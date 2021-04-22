@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 
 <h1>Here are your recipes:</h1>
+<% if(recipes.length) { %>
 <table id="list">
     <thead>
         <tr>
@@ -22,3 +23,6 @@
         <% }); %>
     </tbody>
 </table>
+<% } else { %>
+    <h5>No Recipes Yet</h5>    
+<% } %> 

@@ -6,6 +6,8 @@ module.exports = {
     create,
     show,
     delete: deleteRecipe,
+    edit,
+    update,
 }
 
 function index (req, res) {
@@ -35,4 +37,18 @@ function deleteRecipe(req, res) {
     Recipe.findByIdAndRemove(req.params.id).exec(function(err, recipe){
         res.redirect('/recipes');
     })
+}
+
+function edit(req, res) {
+    Recipe.findById(req.params.id).exec(function(err, recipe){
+        res.render('recipes/edit', {recipe})
+    })
+}
+
+function update(req, res) {
+    Recipe.findByIdAndUpdate(req.params.id, req.body, function(err, recipe){
+            res.redirect(`/recipes/${req.params.id}`);
+
+    })
+    
 }

@@ -12,10 +12,12 @@
     <div><%= recipe.description %> </div>
     <div>Instructions: </div>
     <div><%= recipe.instructions %> </div>
-    <div></div>
-    <div>
-        <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
-            <button id="delete-btn" type="submit">Delete Recipe</button>
-        </form>
-    </div>
+    
 </section>
+
+<a href="/recipes/<%= recipe._id %>/edit">Edit This Recipe</a>
+<div>
+    <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
+        <button id="delete-btn" type="submit">Delete Recipe</button>
+    </form>
+</div>
