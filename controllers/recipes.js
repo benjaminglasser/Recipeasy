@@ -22,10 +22,11 @@ function newRecipe (req, res) {
 
 function create(req, res) {
     Recipe.create(req.body, function(err, recipe){
-        if (err) return res.redirect('/recipes/new');
+        if (err) {
+            console.log(err);
+            return res.redirect('/recipes/new');
+        }
         res.redirect('/recipes');
-
-        // push ingredient Ids to Recipe.ingredients array
 
     })
 }

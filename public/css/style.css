@@ -119,3 +119,7 @@ a:hover {
     grid-gap: 10px;
     grid-template-columns: repeat(2, minmax(auto, 22rem));
 }
+
+.new-input {
+    width: 100%
+}

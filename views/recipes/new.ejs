@@ -10,10 +10,18 @@
     <input type="number" name="cookTime" min="1">
     <label>Description:</label>
     <textarea rows="10" cols="25" name="description"></textarea>
-    
-    <!-- insert ingredient here -->
-    
+    <label>Ingredients:</label>
+    <div id="first-ing">
+        <input class="new-input" type="text" name="ingredients">
+        <div></div>
+        <button type="button" id="new-ingredient">new ingredient</button>
+    </div>
+
+
+
+
+
     <label>Instructions:</label>
-    <textarea rows="20" cols="25" name="instructions"></textarea>
+    <input type="text" name="instructions">
     <input id="submit" type="submit" value="Add Recipe">
 </form>
