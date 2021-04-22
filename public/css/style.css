@@ -123,3 +123,9 @@ a:hover {
 .new-input {
     width: 100%
 }
+
+.list {
+    margin: 0 0 1rem;
+  padding: 0px 12px;
+  
+}

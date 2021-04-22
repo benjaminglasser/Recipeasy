@@ -2,28 +2,29 @@
 
 <h1>Recipe Info</h1>
 <section id="show-page">
-    <div>Title: </div>
+    <div><strong>Title: </strong></div>
     <div><%= recipe.title %> </div>
-    <div>Cook Time: </div>
+    <div><strong>Cook Time: </strong></div>
     <div><%= recipe.cookTime %> min</div>
-    <div>Difficulty: </div>
+    <div><strong>Difficulty: </strong></div>
     <div><%= recipe.difficulty %>/10 </div>
-    <div>Description: </div>
+    <div><strong>Description: </strong></div>
     <div><%= recipe.description %> </div>
-    <div>Ingredients: </div>
+    <div><strong>Ingredients: </strong></div>
     <div>
-        <ul>
+        <ul class="list">
             <% recipe.ingredients.forEach( ing => { %>
             <li><%= ing %></li>
             <% }) %>
         </ul>
     </div>
 
-    <div>Instructions: </div>
+    <div><strong>Instructions: </strong></div>
     <div>
-        <ol>
+        <ol class="list">
             <% recipe.instructions.forEach( inst => { %>
             <li><%= inst %></li>
+            <br>
             <% }) %>
         </ol>
     </div>
