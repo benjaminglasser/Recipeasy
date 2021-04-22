@@ -24,6 +24,9 @@ function create(req, res) {
     Recipe.create(req.body, function(err, recipe){
         if (err) return res.redirect('/recipes/new');
         res.redirect('/recipes');
+
+        // push ingredient Ids to Recipe.ingredients array
+
     })
 }
 

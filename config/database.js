@@ -1,17 +1,17 @@
 const mongoose = require('mongoose');
-const connectionString = 'mongodb+srv://admin:abc1234@cluster0.rknxx.mongodb.net/Recipeasy?retryWrites=true&w=majority';
 
+const connectionURI = process.env.DATABASE_URI;
 
-mongoose.connect(connectionString, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
+mongoose.connect(connectionURI, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false
 });
 
-// shortcut to mongoose.connection object
-const db = mongoose.connection;
 
+const db = mongoose.connection;
+// database connection event
 db.on('connected', function () {
-  console.log(`Connected to MongoDB at ${db.host}:${db.port}`);
+  console.log(`Mongoose connected to:${db.host}:${db.port}`);
 });

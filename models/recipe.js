@@ -19,7 +19,6 @@ const recipeSchema = new Schema ({
     instructions: {
         type: String,
     },
-    ingredients: [{type: Schema.Types.ObjectId, ref: 'Ingredient'}],
 },{
     timestamps: true,
 });
