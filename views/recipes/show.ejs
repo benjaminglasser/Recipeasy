@@ -5,16 +5,29 @@
     <div>Title: </div>
     <div><%= recipe.title %> </div>
     <div>Cook Time: </div>
-    <div><%= recipe.cookTime %> </div>
+    <div><%= recipe.cookTime %> min</div>
     <div>Difficulty: </div>
-    <div><%= recipe.difficulty %> </div>
+    <div><%= recipe.difficulty %>/10 </div>
     <div>Description: </div>
     <div><%= recipe.description %> </div>
     <div>Ingredients: </div>
-    <div><%= recipe.ingredients %> </div>
+    <div>
+        <ul>
+            <% recipe.ingredients.forEach( ing => { %>
+            <li><%= ing %></li>
+            <% }) %>
+        </ul>
+    </div>
+
     <div>Instructions: </div>
-    <div><%= recipe.instructions %> </div>
-    
+    <div>
+        <ol>
+            <% recipe.instructions.forEach( inst => { %>
+            <li><%= inst %></li>
+            <% }) %>
+        </ol>
+    </div>
+
 </section>
 
 <a href="/recipes/<%= recipe._id %>/edit">Edit This Recipe</a>
