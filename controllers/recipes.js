@@ -12,18 +12,13 @@ module.exports = {
 }
 
 function index(req, res) {
-    // User.find({}, function(err, user) { 
-    //     res.render('recipes/index', { 
-    //         user,
-    //         user: req.user
-    //       });
-    //     }); 
-    Recipe.find({}).sort({
-        updatedAt: "desc"
-    }).exec(function (err, recipes) {
-        res.render('recipes/index', {
-            recipes,
-            user: req.user
+    User.find({}, function (err, users) {
+        Recipe.find({}, function (err, recipes) {
+            res.render('recipes/index', {
+                recipes,
+                user: req.user,
+                users
+            })
         })
     });
 }
@@ -37,7 +32,7 @@ function newRecipe(req, res) {
 }
 
 function create(req, res) {
-    
+
     const data = {
         title: req.body.title,
         difficulty: req.body.difficulty,
@@ -52,25 +47,17 @@ function create(req, res) {
             console.log(err);
             return res.redirect('/recipes/new');
         } else {
-            User.findById(req.params.userId, function(err, user){
+            User.findById(req.params.userId, function (err, user) {
                 req.user.recipes.push(recipe._id);
-                req.user.save(function(err) {
+                req.user.save(function (err) {
                     res.redirect('/recipes');
                 })
             })
         }
 
-        // User.findById(req.params.userId, function(err, user) {
-        //     user.recipes.push('hi');
-        //     user.save(function(err) {
-                
-                
-        //     })
-        // })
 
-        
     })
-    
+
 }
 
 function show(req, res) {
