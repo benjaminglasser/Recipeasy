@@ -13,7 +13,7 @@ module.exports = {
 
 function index(req, res) {
     User.find({}, function (err, users) {
-        Recipe.find({}, function (err, recipes) {
+        Recipe.find({}).sort({updatedAt: "desc"}).exec(function (err, recipes) {
             res.render('recipes/index', {
                 recipes,
                 user: req.user,
