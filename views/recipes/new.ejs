@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h1>Enter a new recipe</h1>
-<form id="new-recipe" action="/recipes" method="POST" autocomplete="off">
+<form id="new-recipe" action="/recipes/<%= user._id%>" method="POST" autocomplete="off">
     <label>Title:</label>
     <input type="text" name="title">
     <label>Difficulty:</label>
@@ -21,7 +21,7 @@
     <input type="number" name="cookTime" min="1">
     <label>Description:</label>
     <textarea rows="10" cols="25" name="description"></textarea>
-    
+
     <label>Ingredients:</label>
     <div>
         <input class="new-input" type="text" name="ingredients">

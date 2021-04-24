@@ -3,10 +3,13 @@ const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const port = process.env.PORT || 3000;
+const session = require('express-session');
+const passport = require('passport');
 
 
 require('dotenv').config();
 require('./config/database');
+require('./config/passport');
 
 // Create our express app
 const app = express();
@@ -25,6 +28,17 @@ app.use(morgan('dev'));
 app.use(express.static('public')); 
 app.use(express.urlencoded({ extended: false })); 
 app.use(methodOverride('_method'));
+
+//session middleware
+app.use(session({
+  secret: 'SEIRRocks!',
+  resave: false,
+  saveUninitialized: true
+}));
+
+//passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Mount our route handlers
 app.use('/', indexRouter);

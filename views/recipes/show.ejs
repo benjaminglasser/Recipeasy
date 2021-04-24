@@ -30,9 +30,11 @@
 
 </section>
 
+<% if(recipe.user.includes(user._id)) { %>
 <a href="/recipes/<%= recipe._id %>/edit">Edit This Recipe</a>
 <div>
     <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
         <button id="delete-btn" type="submit">Delete Recipe</button>
     </form>
 </div>
+<% } %>
