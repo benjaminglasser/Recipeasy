@@ -51,8 +51,14 @@ function create(req, res) {
         if (err) {
             console.log(err);
             return res.redirect('/recipes/new');
+        } else {
+            User.findById(req.params.userId, function(err, user){
+                req.user.recipes.push(recipe._id);
+                req.user.save(function(err) {
+                    res.redirect('/recipes');
+                })
+            })
         }
-        res.redirect('/recipes');
 
         // User.findById(req.params.userId, function(err, user) {
         //     user.recipes.push('hi');
