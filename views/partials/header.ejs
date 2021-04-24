@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script defer src="/js/script.js"></script>
-  <link rel='stylesheet' href='/css/style.css' />
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script defer src="/js/script.js"></script>
+  <!-- Materialize Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Materialize CSS Framework -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="/css/style.css" />
+  <!-- JavaScript for Materialize -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <title>Recipeasy</title>
 </head>
+
 <body>
   <nav>
     <p id="title">📖</p>
     <a href="/">HOME</a>
-    <a href="/recipes/new" >ADD RECIPE</a>
-    <a href="/recipes" >ALL RECIPES</a>
-    <!-- <a href="/shopping" >SHOPPING LIST</a> -->
+    <a href="/recipes">ALL RECIPES</a>
+    
+    <% if (user) { %>
+      
+      <a href="/recipes/new/<%= user._id %>">ADD RECIPE</a>
+      <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out <%= user.name %></a>
+      <% } else { %>
+      <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+      <% } %>
+
+
+
   </nav>

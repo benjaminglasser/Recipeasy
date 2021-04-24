@@ -1,28 +1,55 @@
 <%- include('../partials/header') %>
 
-<h1>Here are your recipes:</h1>
+<h1>Recipes:</h1>
 <% if(recipes.length) { %>
-<table id="list">
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Cook Time</th>
-            <th>Difficulty</th>
-            <th>Date Added</th>
-        </tr>
-    </thead>
-    <tbody>
-        <% recipes.forEach(function(recipe) { %>
-            <tr>
-                <td> <%= recipe.title %> </td>
-                <td> <%= recipe.cookTime %> min </td>
-                <td> <%= recipe.difficulty %>/10 </td>
-                <td> <%= recipe.updatedAt.toLocaleString() %> </td>
-                <td><a id="details-btn" href="/recipes/<%= recipe._id %>">DETAILS</a></td>
-            </tr>
-        <% }); %>
-    </tbody>
-</table>
+<main class="container">
+    <div class="row">
+        <div class="col s12">
+            <% users.forEach(function(u) { %>
+            <div class="card purple">
+                <div class="card-content white-text">
+                    <div>
+                        <span class="card-title">
+                            <img src="<%= u.avatarURL %>" alt="<%= u.name %>" class="circle small responsive-img">
+                            <span class="user-name"><%= u.name %></span>
+                        </span>
+                    </div>
+
+
+                    <!-- showing recipes-->
+
+                    <table id="list">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Cook Time</th>
+                                <th>Difficulty</th>
+                                <th>Date Added</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% recipes.forEach(function(recipe) { %>
+                                <% if(recipe.user[0].equals(u._id)) { %>
+                            <tr>
+                                <td> <%= recipe.title %> </td>
+                                <td> <%= recipe.cookTime %> min </td>
+                                <td> <%= recipe.difficulty %>/10 </td>
+                                <td> <%= recipe.updatedAt.toLocaleString() %> </td>
+                                <td><a id="details-btn" href="/recipes/<%= recipe._id %>">DETAILS</a></td>
+                            </tr>
+                            <% }; %>
+                            <% }); %>
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</main>
 <% } else { %>
-    <h5>No Recipes Yet</h5>    
-<% } %> 
+<h5>No Recipes Yet</h5>
+<% } %>
