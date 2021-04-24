@@ -1,11 +1,12 @@
 <%- include('../partials/header') %>
 
 <h1>Enter a new recipe</h1>
-<form id="new-recipe" action="/recipes/<%= user._id%>" method="POST" autocomplete="off">
+<form action="/recipes/<%= user._id%>" method="POST" autocomplete="off">
     <label>Title:</label>
     <input type="text" name="title">
     <label>Difficulty:</label>
-    <select name="difficulty">
+    <div class="input-field col s12">
+    <select class="browser-default" name="difficulty">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -17,6 +18,7 @@
         <option value="9">9</option>
         <option value="10">10</option>
       </select>
+    </div>
     <label>Cook Time (in minutes):</label>
     <input type="number" name="cookTime" min="1">
     <label>Description:</label>
