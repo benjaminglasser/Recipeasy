@@ -61,7 +61,7 @@ table td {
     text-align: center;
 }
 
-a {
+nav a {
     color: white;
     margin: 20px;
     text-decoration: none;
@@ -70,7 +70,7 @@ a {
     font-size: 30px;
 }
 
-a:hover {
+nav a:hover {
     color: rgb(125, 125, 125);
 }
 
@@ -171,27 +171,8 @@ h1:nth-child(4) .text {
     color: black;
 }
 
-#show-page {
-    margin: 20px;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 1rem;
-    color: white;
-    font-size: 30px;
-}
 
-#delete-btn {
-    font-size: 15px;
-    background-color: red;
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
-}
 
-#delete-btn:hover {
-    background-color: rgb(170, 53, 53);
-}
 
 #new-recipe {
     display: grid;
@@ -200,14 +181,12 @@ h1:nth-child(4) .text {
 }
 
 #add-ingredient-form {
-
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(2, minmax(auto, 22rem));
 }
 
 #new-page {
-    /* /* background: rgb(37,37,37); */
     background: linear-gradient(159deg, rgba(37,37,37,1) 39%, rgba(0,162,179,1) 100%);
 }
 
@@ -218,13 +197,13 @@ h1:nth-child(4) .text {
 
 .container .card{
   position: relative;
-  z-index: 1;
   background: inherit;
+  border-radius: 2px;
   overflow: hidden;
 }
 
-.container .card:before {
-    content: "";
+.container .card:after {
+    content: '';  
   position: absolute;
   background: inherit;
   z-index: -1;
@@ -232,12 +211,14 @@ h1:nth-child(4) .text {
   left: 0;
   right: 0;
   bottom: 0;
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-  filter: blur(100px);
-  margin: -20px;
+  box-shadow: inset 0 0 0 200px rgba(196, 196, 196, 0.336);
+ filter: blur(100px);
+  
 }
 
 .container table{
+    z-index: 1;
+    content: '';
     background-color: rgb(237, 237, 237);
     color: rgb(0, 0, 0);
     border-radius: 1%;
@@ -250,11 +231,6 @@ h1:nth-child(4) .text {
     width: 100%
 }
 
-.list {
-    
-    padding: 0px 12px;
-
-}
 
 .responsive-img {
     width: 30px;
@@ -292,4 +268,90 @@ h1:nth-child(4) .text {
 
 .form .form-btn:hover {
     font-size: 20px;
+}
+
+
+.show-page {
+    background-color: rgb(237, 237, 237);
+    width: 500px;
+    padding: 30px;
+    color: rgb(0, 0, 0);
+    margin: 70px;
+    border-radius: 1%;
+    box-shadow: 8px 8px 16px 6px rgba(31, 31, 31, 0.694);
+    position: relative;
+}
+
+.show-page .time-difficulty {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    
+}
+
+.show-page .title {
+    box-shadow: inset 0 0 5px #00000048;
+    padding: 10px 30px;
+    background: rgba(0, 0, 0, 0.068);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.show-page h3 {
+    margin: 0px 0px;
+}
+
+.show-page ul {
+    padding: 0px 40px;
+}
+
+.show-page .bottom-btns {
+    width: 114%;
+    display: flex;
+    height: 50px;
+    margin: 20px 0px -30px 0px;
+    transform: translate(-30px)
+}
+
+.show-page .edit-btn {
+    width: 50%;
+    background: rgb(1, 104, 1);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.edit-btn:hover {
+    background-color: green;
+}
+
+.show-page .delete-btn {
+    width: 50%;
+    color: white;
+    border: none;
+    background-color: rgb(133, 41, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: rgb(170, 53, 53);
+}
+
+
+.show-page button {
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    color: inherit;
+	border: none;
+	padding: 0;
 }
