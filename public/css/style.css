@@ -1,6 +1,8 @@
+
+
 * {
     box-sizing: border-box;
-    font-family: Helvetica;
+    font-family: 'Tajawal', sans-serif;
     margin: 0;
 }
 
@@ -8,22 +10,88 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 80px 0 0 0;
+    height: 100vh;
     flex-direction: column;
-    background-color: lightgreen;
+    background-color:  #252525;
 }
+
+.main-page {
+    margin: -80px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.main-page h1 {
+    position: relative;
+    overflow: hidden;
+    margin: 0 -10px 0 0;
+}
+
+.main-page h1 .text {
+    display: block;
+    animation: textanimation 1s backwards;
+    animation-delay: 400ms;
+}
+
+h1:nth-child(1) .text {
+    animation-delay: 400ms;
+}
+h1:nth-child(2) .text {
+    animation-delay: 600ms;
+}
+h1:nth-child(3) .text {
+    animation-delay: 800ms;
+}
+h1:nth-child(4) .text {
+    animation-delay: 1s;
+}
+
+@keyframes textanimation {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.main-page a{
+    visibility: hidden;
+    margin: 0 -10px 0 0;
+    animation: fadeIn 5s 1 forwards;   
+    animation-delay:1.4s;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.0; visibility: visible;
+    }
+    100% {
+        opacity: 1.0; visibility: visible;
+    }
+  }
 
 h1 {
     margin: 40px;
+    color: white;
+    font-size: 160px;
 }
 
 nav {
+    position: absolute;
+    top: 15px;
     grid-area: nav;
-    background-color: rgb(118, 218, 118);
+    background-color: rgb(118, 218, 118, 0);
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     align-items: center;
     padding: 0 20px 0 30px;
     width: 100%;
+    box-shadow: 0px 0px;
+    font-size: 20px;
 }
 
 nav>a {
@@ -38,6 +106,7 @@ nav>#title {
     margin-right: auto;
     font-size: 60px;
 }
+
 
 table {
     font-size: 20px;
@@ -55,11 +124,12 @@ table td {
 
 a {
     
-    color: black;
+    color: white;
     margin: 20px;
     text-decoration: none;
     padding: 10px;
     border-radius: 5px;
+    font-size: 30px;
 }
 
 a:hover {
@@ -128,4 +198,8 @@ a:hover {
     margin: 0 0 1rem;
   padding: 0px 12px;
   
+}
+
+.responsive-img{
+    width: 30px;
 }

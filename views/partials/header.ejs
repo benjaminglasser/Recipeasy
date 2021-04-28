@@ -8,6 +8,9 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script defer src="/js/script.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;400;800&display=swap" rel="stylesheet">
   <!-- Materialize Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Materialize CSS Framework -->
@@ -20,17 +23,17 @@
 
 <body>
   <nav>
-    <p id="title">📖</p>
+    <!-- <p id="title">📖</p> -->
     <a href="/">HOME</a>
     <a href="/recipes">ALL RECIPES</a>
-    
+
     <% if (user) { %>
-      
-      <a href="/recipes/new/<%= user._id %>">ADD RECIPE</a>
-      <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out <%= user.name %></a>
-      <% } else { %>
-      <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-      <% } %>
+
+    <a href="/recipes/new/<%= user._id %>">ADD RECIPE</a>
+    <a href="/logout">LOG OUT <%= user.name.toUpperCase() %></a>
+    <% } else { %>
+    <a href="/auth/google">LOGIN WITH GOOGLE</a>
+    <% } %>
 
 
 
