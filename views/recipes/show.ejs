@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 
+
 <h1>Recipe Info</h1>
 <section id="show-page">
     <div><strong>Title: </strong></div>
@@ -24,7 +25,7 @@
         <ol class="list">
             <% recipe.instructions.forEach( inst => { %>
             <li><%= inst %></li>
-            <br>
+    
             <% }) %>
         </ol>
     </div>
@@ -39,3 +40,4 @@
     </form>
 </div>
 <% } %>
+

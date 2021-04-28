@@ -1,5 +1,3 @@
-
-
 * {
     box-sizing: border-box;
     font-family: 'Tajawal', sans-serif;
@@ -11,73 +9,15 @@ body {
     justify-content: center;
     align-items: center;
     margin: 80px 0 0 0;
-    height: 100vh;
     flex-direction: column;
-    background-color:  #252525;
+    background-color: #252525;
+    color: white;
 }
-
-.main-page {
-    margin: -80px 0 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-}
-.main-page h1 {
-    position: relative;
-    overflow: hidden;
-    margin: 0 -10px 0 0;
-}
-
-.main-page h1 .text {
-    display: block;
-    animation: textanimation 1s backwards;
-    animation-delay: 400ms;
-}
-
-h1:nth-child(1) .text {
-    animation-delay: 400ms;
-}
-h1:nth-child(2) .text {
-    animation-delay: 600ms;
-}
-h1:nth-child(3) .text {
-    animation-delay: 800ms;
-}
-h1:nth-child(4) .text {
-    animation-delay: 1s;
-}
-
-@keyframes textanimation {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-.main-page a{
-    visibility: hidden;
-    margin: 0 -10px 0 0;
-    animation: fadeIn 5s 1 forwards;   
-    animation-delay:1.4s;
-
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0.0; visibility: visible;
-    }
-    100% {
-        opacity: 1.0; visibility: visible;
-    }
-  }
 
 h1 {
-    margin: 40px;
+    margin: 40px 0;
     color: white;
-    font-size: 160px;
+    font-size: 100px;
 }
 
 nav {
@@ -86,7 +26,7 @@ nav {
     grid-area: nav;
     background-color: rgb(118, 218, 118, 0);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding: 0 20px 0 30px;
     width: 100%;
@@ -94,7 +34,7 @@ nav {
     font-size: 20px;
 }
 
-nav>a {
+nav a {
     margin: 20px;
     text-decoration: none;
     padding: 10px;
@@ -102,14 +42,11 @@ nav>a {
 }
 
 
-nav>#title {
-    margin-right: auto;
-    font-size: 60px;
-}
 
 
 table {
     font-size: 20px;
+
 }
 
 table thead th {
@@ -123,7 +60,6 @@ table td {
 }
 
 a {
-    
     color: white;
     margin: 20px;
     text-decoration: none;
@@ -136,20 +72,95 @@ a:hover {
     color: rgb(125, 125, 125);
 }
 
+.main-page {
+    margin: -80px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-page h1 {
+    position: relative;
+    overflow: hidden;
+    margin: 0 -10px 0 0;
+    font-size: 160px;
+}
+
+.main-page h1 .text {
+    display: block;
+    animation: textanimation 1s backwards;
+    animation-delay: 400ms;
+}
+
+h1:nth-child(1) .text {
+    animation-delay: 400ms;
+}
+
+h1:nth-child(2) .text {
+    animation-delay: 600ms;
+}
+
+h1:nth-child(3) .text {
+    animation-delay: 800ms;
+}
+
+h1:nth-child(4) .text {
+    animation-delay: 1s;
+}
+
+@keyframes textanimation {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.main-page a {
+    visibility: hidden;
+    margin: 0 -10px 0 0;
+    animation: fadeIn 5s 1 forwards;
+    animation-delay: 1.4s;
+    letter-spacing: 0px;
+    transition: letter-spacing 1s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.0;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 1.0;
+        visibility: visible;
+    }
+}
+
+.main-page a:hover {
+    letter-spacing: 3px;
+}
+
 
 
 #submit {
-    margin: 30px 200px;
+    width: 100%;
+    height: 48px;
+    margin-top: 24px;
     font-size: 20px;
-    padding: 10px;
-    background-color: rgb(204, 245, 252);
+    padding: 0px 20px;
+    color: white;
+    background-color: rgb(3, 108, 120);
     text-decoration: none;
     border-radius: 5px;
-    grid-column: 1/ span 2;
 }
 
 #submit:hover {
-    background-color: hsl(189, 32%, 75%);
+    background-color: rgb(0,162,179);
 }
 
 #details-btn {
@@ -162,6 +173,8 @@ a:hover {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 1rem;
+    color: white;
+    font-size: 30px;
 }
 
 #delete-btn {
@@ -190,16 +203,55 @@ a:hover {
     grid-template-columns: repeat(2, minmax(auto, 22rem));
 }
 
+#new-page {
+    /* /* background: rgb(37,37,37); */
+    background: linear-gradient(159deg, rgba(37,37,37,1) 39%, rgba(0,162,179,1) 100%);
+}
+
 .new-input {
     width: 100%
 }
 
 .list {
-    margin: 0 0 1rem;
-  padding: 0px 12px;
-  
+    
+    padding: 0px 12px;
+
 }
 
-.responsive-img{
+.responsive-img {
     width: 30px;
+}
+
+.form {
+    background-color: rgb(237, 237, 237);
+    width: 500px;
+    padding: 30px;
+    color: rgb(0, 0, 0);
+    margin: 70px;
+    border-radius: 1%;
+    box-shadow: 8px 8px 16px 6px rgba(31, 31, 31, 0.646);
+}
+
+.form p {
+    font-size: 30px;
+}
+
+.form input {
+    color: rgba(37,37,37,1);
+}
+
+.form textarea {
+    color: rgba(37,37,37,1);
+    background-color: rgb(223, 223, 223);
+    border: none;
+    box-shadow: inset 0 0 5px #00000048;
+}
+
+.form .form-btn {
+    border: none;
+    padding: 0;
+}
+
+.form .form-btn:hover {
+    font-size: 20px;
 }
