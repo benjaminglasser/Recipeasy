@@ -18,7 +18,7 @@ function handleIngredientClick () {
 function handleInstructionClick () {
     let $newField = $(`
     
-    <input class="new-input" type="text" name="instructions" STYLE="background-color: rgb(223, 223, 223); border: none;box-shadow: inset 0 0 5px #00000048;">
+    <textarea class="instructions" rows="10" name="instructions"></textarea>
     
     `);
     $firstInstruction.append($newField)
