@@ -450,3 +450,67 @@ h1:nth-child(4) .text {
 }
 
 
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 980px) {
+    nav a {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main-page h1 {
+        font-size: 50px;
+    }
+
+    nav a{
+        font-size: 14px;
+    }
+
+    h1 {
+
+        font-size: 50px;
+    }
+
+    .container #list{
+        font-size: 10px;
+        padding: 2px;
+    }
+
+    .container table {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: auto;
+    }
+
+    .container  {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .container thead {
+        display: flex;
+        flex-direction: column;
+        visibility: hidden;
+        margin: -13px 0
+
+    }
+
+    .container tr {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+  }
+
+
+  
+
+@media only screen and (max-width: 610px) {
+    nav a {
+        font-size: 8px;
+    }
+}
