@@ -44,8 +44,9 @@
         <br>
         
         <label>Instructions:</label>
-        <% recipe.instructions.forEach(inst => { %>
-            <div>
+        <% recipe.instructions.forEach((inst, idx) => { %>
+            <div class="inst-cntr">
+                <label class="inst-num"><%= idx +1 %>)</label>
                 <textarea class="instructions" rows="10" name="instructions"><%= inst %></textarea>
             </div>
     

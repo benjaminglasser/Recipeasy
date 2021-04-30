@@ -3,6 +3,9 @@ const $firstIngredient = $('#first-ing')
 const $newInstruction = $('#new-instruction')
 const $firstInstruction = $('#first-instruction')
 
+
+let num =  document.getElementsByClassName('inst-cntr').length;
+
 $newIngredient.click(handleIngredientClick);
 $newInstruction.click(handleInstructionClick);
 
@@ -16,10 +19,12 @@ function handleIngredientClick () {
 }
 
 function handleInstructionClick () {
+    num = num + 1;
     let $newField = $(`
-    
-    <textarea class="instructions" rows="10" name="instructions"></textarea>
-    
+        <div class="inst-cntr">
+            <label class="inst-num">${num})  </label>
+            <textarea class="instructions" rows="10" name="instructions"></textarea>
+        </div>
     `);
     $firstInstruction.append($newField)
 }
