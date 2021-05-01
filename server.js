@@ -17,6 +17,7 @@ const app = express();
 // routers
 const indexRouter = require('./routes/index');
 const recipesRouter = require('./routes/recipes');
+const recipesApiRouter = require('./routes/api/recipes')
 
 
 
@@ -43,6 +44,7 @@ app.use(passport.session());
 // Mount our route handlers
 app.use('/', indexRouter);
 app.use('/recipes', recipesRouter);
+app.use('/api/recipes', recipesApiRouter)
 
 
 

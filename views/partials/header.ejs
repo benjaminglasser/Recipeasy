@@ -25,15 +25,18 @@
   <nav>
     <!-- <p id="title">📖</p> -->
     <a href="/">HOME</a>
-    <a href="/recipes">ALL RECIPES</a>
+    <a href="/recipes">RECIPES</a>
+    
 
     <% if (user) { %>
 
-    <a href="/recipes/new/<%= user._id %>">ADD RECIPE</a>
+    <a href="/recipes/new/<%= user._id %>">NEW</a>
     <a href="/logout">LOG OUT <%= user.name.toUpperCase() %></a>
     <% } else { %>
     <a href="/auth/google">LOGIN WITH GOOGLE</a>
     <% } %>
+
+    <a href="/recipes/search"><i class="large material-icons">search</i></a>
 
 
 

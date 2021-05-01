@@ -449,6 +449,17 @@ h1:nth-child(4) .text {
     background: rgb(0, 179, 69) 100%;
 }
 
+/* SEARCH PAGE */
+
+.results-style {
+    color: white;
+}
+
+.results-style:hover {
+    color: grey;
+}
+
+
 
 /* MEDIA QUERIES */
 
