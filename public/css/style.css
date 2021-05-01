@@ -520,7 +520,11 @@ h1:nth-child(4) .text {
 
   
 
-@media only screen and (max-width: 610px) {
+@media only screen and (max-width: 650px) {
+    nav {
+        justify-content: space-around;
+    }
+    
     nav a {
         font-size: 8px;
     }
