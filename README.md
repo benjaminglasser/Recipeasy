@@ -8,6 +8,7 @@ Recipeasy puts the <em>ease</em> in Recip<em>ese</em>. add your favorite recipes
 ![screen3](./public/imgs/addRecipe.png)
 ![screen4](./public/imgs/showView.png)
 ![screen5](./public/imgs/editView.png)
+![screen6](./public/imgs/search.png)
 
 ## Technologies
 - HTML5
