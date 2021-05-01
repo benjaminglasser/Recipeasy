@@ -26,12 +26,11 @@ nav {
     grid-area: nav;
     background-color: rgb(118, 218, 118, 0);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 0 20px 0 30px;
     width: 100%;
     box-shadow: 0px 0px;
-    font-size: 20px;
 }
 
 nav a {
@@ -40,7 +39,7 @@ nav a {
     padding: 10px;
     border-radius: 5px;
     color: rgb(237, 237, 237);
-
+    font-size: 20px !important;
 }
 
 
@@ -475,7 +474,7 @@ h1:nth-child(4) .text {
     }
 
     nav a{
-        font-size: 14px;
+        font-size: 14px !important;
     }
 
     h1 {
@@ -521,11 +520,8 @@ h1:nth-child(4) .text {
   
 
 @media only screen and (max-width: 650px) {
-    nav {
-        justify-content: space-around;
-    }
     
     nav a {
-        font-size: 8px;
+        font-size: 8px !important;
     }
 }
