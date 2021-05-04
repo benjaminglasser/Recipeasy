@@ -10,6 +10,7 @@
     <div class="row">
         <div class="col s12">
             <% users.forEach(function(u) { %>
+                <% if(u.recipes.length === 0) return%>
             <div class="card">
                 <div class="card-content white-text">
                     <div>

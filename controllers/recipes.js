@@ -72,8 +72,30 @@ function show(req, res) {
 
 function deleteRecipe(req, res) {
     Recipe.findByIdAndRemove(req.params.id).exec(function (err, recipe) {
-        res.redirect('/recipes');
+        User.findById(recipe.user[0], function (err, user) {
+            let index = user.recipes.indexOf(recipe._id.toString())
+            console.log(index, "is index")
+            console.log(user.recipes, "user recipes")
+            console.log(recipe._id, "recipe ID")
+                
+            
+            req.user.recipes.splice(index, 1);
+            console.log("i spliced from " + user.recipes)
+            
+
+            let recipeArr = user.recipes;
+            console.log(recipeArr);  
+            req.user.save(function (err) {
+                res.redirect('/recipes');
+            })
+        })
+        
     })
+
+    // delete recipe in user section too
+    
+    
+
 }
 
 function edit(req, res) {
