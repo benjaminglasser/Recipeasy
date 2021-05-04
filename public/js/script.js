@@ -13,11 +13,17 @@ const form = document.getElementById('search-form');
 const resultsContainer = document.querySelector('.results');
 const inputField = document.querySelector('.input-field')
 
+M.AutoInit();
 
 $newIngredient.click(handleIngredientClick);
 $newInstruction.click(handleInstructionClick);
 form.addEventListener('submit', handleSubmit);
 inputField.addEventListener('focus', init);
+
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+
 
 init();
 
@@ -79,4 +85,6 @@ function handleInstructionClick () {
     $firstInstruction.append($newField)
 }
 
+
 })();
+
