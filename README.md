@@ -11,12 +11,19 @@ Recipeasy puts the <em>ease</em> in Recip<em>ese</em>. add your favorite recipes
 ![screen6](./public/imgs/search.png)
 
 ## Technologies
-- HTML5
-- CSS3
-- Javascript
-- JQuery
-- Express
-- Node.JS
+- HTML
+- CSS
+- JavaScript/jQuery
+- Mongoose
+- MongoDB
+- Express.js
+- Node.js
+- Passport JS
+- EJS (Embedded Java Templates)
+- Google Fonts
+- Materialize CSS
+- OAuth 2.0 with Google
+
 
 ## Getting Started
 [Click here](http://recipeasy4sheasy.herokuapp.com/) to get started
